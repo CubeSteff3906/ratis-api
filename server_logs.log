@@ -1,0 +1,3557 @@
+'nodemon' is not recognized as an internal or external command,
+operable program or batch file.
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+MongoServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at Timeout._onTimeout (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\mongodb\lib\sdam\topology.js:278:38)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) {
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  [Symbol(errorLabels)]: Set(0) {}
+}
+C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\mongoose\lib\connection.js:809
+    err = new ServerSelectionError();
+          ^
+
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\mongoose\lib\connection.js:809:11)
+    at NativeConnection.openUri (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\mongoose\lib\connection.js:784:11) {
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 721354079,
+        lastWriteDate: 0,
+        error: MongoNetworkError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+            at connectionFailureError (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\mongodb\lib\cmap\connect.js:367:20)
+            at Socket.<anonymous> (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\mongodb\lib\cmap\connect.js:290:22)
+            at Object.onceWrapper (node:events:629:26)
+            at Socket.emit (node:events:514:28)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          cause: AggregateError
+              at internalConnectMultiple (node:net:1114:18)
+              at afterConnectMultiple (node:net:1667:5) {
+            code: 'ECONNREFUSED',
+            [errors]: [Array]
+          },
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined
+}
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+^C[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+Connected to Mongoose
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+Connected to Mongoose
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+Connected to Mongoose
+[
+  {
+    _id: 'RT0100',
+    nume: 'Mircea ',
+    prenume: 'Sorin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0098',
+    nume: 'Dorneanu',
+    prenume: 'Andrei Robert',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0097',
+    nume: 'Amironesei',
+    prenume: 'Fanica',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0096',
+    nume: 'Busuioc',
+    prenume: 'Gabriela Loredana',
+    pozitie: 'Lucrator',
+    verificator: true,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0095',
+    nume: 'Atomi',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0100',
+    nume: 'Mircea ',
+    prenume: 'Sorin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0098',
+    nume: 'Dorneanu',
+    prenume: 'Andrei Robert',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0097',
+    nume: 'Amironesei',
+    prenume: 'Fanica',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0096',
+    nume: 'Busuioc',
+    prenume: 'Gabriela Loredana',
+    pozitie: 'Lucrator',
+    verificator: true,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0095',
+    nume: 'Atomi',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0098',
+    nume: 'Dorneanu',
+    prenume: 'Andrei Robert',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0097',
+    nume: 'Amironesei',
+    prenume: 'Fanica',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0096',
+    nume: 'Busuioc',
+    prenume: 'Gabriela Loredana',
+    pozitie: 'Lucrator',
+    verificator: true,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0095',
+    nume: 'Atomi',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0097',
+    nume: 'Amironesei',
+    prenume: 'Fanica',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0096',
+    nume: 'Busuioc',
+    prenume: 'Gabriela Loredana',
+    pozitie: 'Lucrator',
+    verificator: true,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0095',
+    nume: 'Atomi',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0096',
+    nume: 'Busuioc',
+    prenume: 'Gabriela Loredana',
+    pozitie: 'Lucrator',
+    verificator: true,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0095',
+    nume: 'Atomi',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0095',
+    nume: 'Atomi',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0094',
+    nume: 'Iordache ',
+    prenume: 'Genu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0085',
+    nume: 'Gitlan',
+    prenume: 'Ion',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0013',
+    nume: 'Mircea',
+    prenume: 'Gheorghe',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0028',
+    nume: 'Borsan',
+    prenume: 'Mihai',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0029',
+    nume: 'Asemirei',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0049',
+    nume: 'Toma',
+    prenume: 'Liviu Florinel',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0031',
+    nume: 'Voicu',
+    prenume: 'Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0086',
+    nume: 'Mindrigiu',
+    prenume: 'Geta Catalina Amalia',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0047',
+    nume: 'Arama',
+    prenume: 'Gelu',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RAK092',
+    nume: 'Gitlan',
+    prenume: 'Dragos-Ioan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RAK093',
+    nume: 'Blanaru',
+    prenume: 'Vasilica Bogdan',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RAK094',
+    nume: 'Iorga',
+    prenume: 'Liliana Corina',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0064',
+    nume: 'Onceanu',
+    prenume: 'Cristina Ioana',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0025',
+    nume: 'Chiriac',
+    prenume: 'Constantin',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0001',
+    nume: 'Avadanei',
+    prenume: 'Bogdan',
+    pozitie: 'Administrator',
+    verificator: false,
+    parola: 'bossDeBoss',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0069',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Operator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  },
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RT0420',
+    nume: 'Nica',
+    prenume: 'Alexandru',
+    pozitie: 'Lucrator',
+    verificator: false,
+    parola: 'NULL',
+    hash: 'null',
+    __v: 0
+  }
+]
+[]
+[]
+[
+  {
+    _id: new ObjectId("64e1c86a8a1380f64509b691"),
+    id: 1,
+    nume: 'Receptie Material',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8738a1380f64509b695"),
+    id: 2,
+    nume: 'Eliberare Material',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8798a1380f64509b699"),
+    id: 3,
+    nume: 'Control Eliberare',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c87e8a1380f64509b69d"),
+    id: 4,
+    nume: 'Debitare Material',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8a28a1380f64509b6a8"),
+    id: 5,
+    nume: 'Setup Masina 1',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8a68a1380f64509b6ac"),
+    id: 6,
+    nume: 'Strunjire 1',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8b38a1380f64509b6b7"),
+    id: 7,
+    nume: 'Control Prima Piesa',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8b78a1380f64509b6bb"),
+    id: 8,
+    nume: 'Strunjire 2',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8bd8a1380f64509b6bf"),
+    id: 9,
+    nume: 'Strunjire 3',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8c68a1380f64509b6c3"),
+    id: 10,
+    nume: 'Strunjire 4',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8cd8a1380f64509b6c7"),
+    id: 11,
+    nume: 'Strunjire 5',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8d18a1380f64509b6cb"),
+    id: 12,
+    nume: 'Strunjire 6',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8d98a1380f64509b6cf"),
+    id: 13,
+    nume: 'Control Interfazic',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8dd8a1380f64509b6d3"),
+    id: 14,
+    nume: 'Gaurire',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8e38a1380f64509b6d7"),
+    id: 15,
+    nume: 'Setup Masina 2',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8f18a1380f64509b6db"),
+    id: 16,
+    nume: 'Frezare 1',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9008a1380f64509b6e6"),
+    id: 17,
+    nume: 'Control Prima Piesa',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9048a1380f64509b6ea"),
+    id: 18,
+    nume: 'Frezare 2',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9078a1380f64509b6ee"),
+    id: 19,
+    nume: 'Frezare 3',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9128a1380f64509b6f2"),
+    id: 20,
+    nume: 'Frezare 4',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9178a1380f64509b6f6"),
+    id: 21,
+    nume: 'Frezare 5',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9218a1380f64509b701"),
+    id: 22,
+    nume: 'Frezare 6',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c92f8a1380f64509b705"),
+    id: 23,
+    nume: 'Frezare 7',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9328a1380f64509b709"),
+    id: 24,
+    nume: 'Frezare 8',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9368a1380f64509b70d"),
+    id: 25,
+    nume: 'Frezare 9',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c93a8a1380f64509b711"),
+    id: 26,
+    nume: 'Frezare 10',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9538a1380f64509b715"),
+    id: 27,
+    nume: 'Ajustare / Debavurare',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c95a8a1380f64509b719"),
+    id: 28,
+    nume: 'Tratament Termic',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9618a1380f64509b71d"),
+    id: 29,
+    nume: 'Brunare',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9658a1380f64509b721"),
+    id: 30,
+    nume: 'Control Final',
+    areProgram: false,
+    __v: 0
+  }
+]
+[]
+{
+  _id: 'RTS-001',
+  nume: 'Bejenescu',
+  prenume: 'Stefan',
+  pozitie: 'Administrator',
+  verificator: true,
+  receptie: true,
+  supervizor: true,
+  parola: 'Stef@n032006@'
+}
+[]
+[
+  {
+    _id: 'RTS-001',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Administrator',
+    verificator: true,
+    receptie: true,
+    supervizor: true,
+    parola: 'Stef@n032006@',
+    __v: 0
+  }
+]
+[
+  {
+    _id: new ObjectId("64e1c86a8a1380f64509b691"),
+    id: 1,
+    nume: 'Receptie Material',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8738a1380f64509b695"),
+    id: 2,
+    nume: 'Eliberare Material',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8798a1380f64509b699"),
+    id: 3,
+    nume: 'Control Eliberare',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c87e8a1380f64509b69d"),
+    id: 4,
+    nume: 'Debitare Material',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8a28a1380f64509b6a8"),
+    id: 5,
+    nume: 'Setup Masina 1',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8a68a1380f64509b6ac"),
+    id: 6,
+    nume: 'Strunjire 1',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8b38a1380f64509b6b7"),
+    id: 7,
+    nume: 'Control Prima Piesa',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8b78a1380f64509b6bb"),
+    id: 8,
+    nume: 'Strunjire 2',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8bd8a1380f64509b6bf"),
+    id: 9,
+    nume: 'Strunjire 3',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8c68a1380f64509b6c3"),
+    id: 10,
+    nume: 'Strunjire 4',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8cd8a1380f64509b6c7"),
+    id: 11,
+    nume: 'Strunjire 5',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8d18a1380f64509b6cb"),
+    id: 12,
+    nume: 'Strunjire 6',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8d98a1380f64509b6cf"),
+    id: 13,
+    nume: 'Control Interfazic',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8dd8a1380f64509b6d3"),
+    id: 14,
+    nume: 'Gaurire',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8e38a1380f64509b6d7"),
+    id: 15,
+    nume: 'Setup Masina 2',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c8f18a1380f64509b6db"),
+    id: 16,
+    nume: 'Frezare 1',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9008a1380f64509b6e6"),
+    id: 17,
+    nume: 'Control Prima Piesa',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9048a1380f64509b6ea"),
+    id: 18,
+    nume: 'Frezare 2',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9078a1380f64509b6ee"),
+    id: 19,
+    nume: 'Frezare 3',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9128a1380f64509b6f2"),
+    id: 20,
+    nume: 'Frezare 4',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9178a1380f64509b6f6"),
+    id: 21,
+    nume: 'Frezare 5',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9218a1380f64509b701"),
+    id: 22,
+    nume: 'Frezare 6',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c92f8a1380f64509b705"),
+    id: 23,
+    nume: 'Frezare 7',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9328a1380f64509b709"),
+    id: 24,
+    nume: 'Frezare 8',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9368a1380f64509b70d"),
+    id: 25,
+    nume: 'Frezare 9',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c93a8a1380f64509b711"),
+    id: 26,
+    nume: 'Frezare 10',
+    areProgram: true,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9538a1380f64509b715"),
+    id: 27,
+    nume: 'Ajustare / Debavurare',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c95a8a1380f64509b719"),
+    id: 28,
+    nume: 'Tratament Termic',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9618a1380f64509b71d"),
+    id: 29,
+    nume: 'Brunare',
+    areProgram: false,
+    __v: 0
+  },
+  {
+    _id: new ObjectId("64e1c9658a1380f64509b721"),
+    id: 30,
+    nume: 'Control Final',
+    areProgram: false,
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RTS-001',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Administrator',
+    verificator: true,
+    receptie: true,
+    supervizor: true,
+    parola: 'Stef@n032006@',
+    __v: 0
+  }
+]
+[
+  {
+    _id: 'RTS-001',
+    nume: 'Bejenescu',
+    prenume: 'Stefan',
+    pozitie: 'Administrator',
+    verificator: true,
+    receptie: true,
+    supervizor: true,
+    parola: 'Stef@n032006@',
+    __v: 0
+  }
+]
+null
+null
+null
+null
+null
+null
+null
+null
+null
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+node:events:492
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\node_modules\express\lib\application.js:635:24)
+    at Object.<anonymous> (C:\Users\Stefan\Desktop\Lambda Industrial Suite Legacy Version\ratis-legacy\server.js:26:5)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.9.0
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+^C

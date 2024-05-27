@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/styles/angajat/operatii-piesa.css">
+  <title>Operatii Piesa</title>
+</head>
+<body style="margin-top:2em; margin-bottom: 1em; display: flex; flex-direction: column; align-items: center;">
+  
+  <div class="form-comanda">
+    <p style="font-size: 40px; font-weight: bold; display: inline; margin-top: 2em;"> SELECTATI OPERATIA </p>
+
+    <div class="mini-casuta">
+
+      <% let vectorOperatii = piesaCurenta.stadiuOperatie ; %>
+      <% let operatiaCurenta = 1; %>
+      <% while (piesaCurenta.stadiuOperatie[operatiaCurenta] === "NULL" || piesaCurenta.stadiuOperatie[operatiaCurenta] === "Finalizata") { %>
+        <% operatiaCurenta++; %>
+      <% } %>
+      <% let operatiaPrecedenta = operatiaCurenta - 1; %>
+      <% console.log(operatiaCurenta, operatiaPrecedenta) %>
+      <% while (operatiaPrecedenta > 0 && piesaCurenta.stadiuOperatie[operatiaPrecedenta] !== "Finalizata") { %>
+        <% operatiaPrecedenta--; %>
+      <% } %>
+      <% console.log(operatiaCurenta) %>
+
+
+      <% if (piesaCurenta.cantitatePieseInCurs[operatiaCurenta] > 0) { %>
+        <% console.log("Operation already started") %>
+        <% if (piesaCurenta.inspectiePrimaPiesa[operatiaCurenta] === false) { %>
+          <% console.log("Operation has not been through initial inspection") %>
+          <% if (angajatCurent.verificator === true || angajatCurent.supervizor === true) { %>
+            <% console.log("Accessing employee has privileges") %>
+            <form method="POST" action="./operatii-piesa">
+              <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+              <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+              <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+              <input type="hidden" name="tipOperatie" value="Inspectie">
+              <button type="submit">Treceti inspectia primei piese dupa <br> <%= denumiriOperatii[operatiaCurenta] %> pentru <%= piesaCurenta.cantitatePieseInCurs[operatiaCurenta]%> x <%= piesaCurenta.Denumire %></button>
+            </form>
+          <% } else { %>
+            <% console.log("Accesing employee does not have privileges") %>
+            <div style="display: flex; flex-direction: column; align-items: center; ">
+              <p style="font-size: 26px; font-weight: bold;">Se efectueaza o inspectie tehnica. Asteptati ok-ul controlorului!</p>
+              <br> <br>
+              <button type="button" onclick="window.location.href='/'">OK</button>
+            </div>
+          <% } %>
+        <% } else { %>
+          <% console.log("Operation has been through initial inspection") %>
+          <% if (angajatCurent.nume === piesaCurenta.angajatOperatie[operatiaCurenta] || angajatCurent.supervizor === true) { %>
+            <% console.log("Operation is to be finished") %>
+            <form method="POST" action="./operatii-piesa">
+              <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+              <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+              <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+              <input type="hidden" name="tipOperatie" value="Finalizare">
+              <button type="submit">Finalizati <%= denumiriOperatii[operatiaCurenta] %> <br> pentru <%= piesaCurenta.cantitatePieseInCurs[operatiaCurenta]%> x <%= piesaCurenta.Denumire %></button>
+            </form>
+          <% } else { %>
+            <% console.log("Operation has to be finished but not by the employee currently inquiring") %>
+            <div style="display: flex; flex-direction: column; align-items: center; ">
+              <p style="font-size: 26px; font-weight: bold;">Aceasta operatie este in lucru si poate fi finalizata <br> doar de angajatul ce a inceput-o sau de un supervizor.</p>
+              <br> <br>
+              <button type="button" onclick="window.location.href='/'">OK</button>
+            </div>
+          <% } %>
+        <% } %>
+      <% } else if (piesaCurenta.cantitatePieseFinalizate[operatiaPrecedenta] > 0 && piesaCurenta.stadiuOperatie[operatiaCurenta] !== "In lucru" ) { %>
+        <% console.log("Operation has not started yet") %>
+        <% if (denumiriOperatii[operatiaCurenta].includes("Control") || denumiriOperatii[operatiaCurenta].includes("Receptie") || denumiriOperatii[operatiaCurenta].includes("Eliberare") || denumiriOperatii[operatiaCurenta].includes("Livrare") || denumiriOperatii[operatiaCurenta].includes("Ambalare")) { %>
+          <% if (denumiriOperatii[operatiaCurenta].includes("Control")) { %>
+            <% console.log("Operation needs control") %>
+            <% if (angajatCurent.verificator === true || angajatCurent.supervizor === true) { %>
+              <form method="POST" action="./operatii-piesa">
+                <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+                <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+                <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+                <input type="hidden" name="tipOperatie" value="InitiereFinalizare">
+                <button type="submit">Treceti inspectia dupa operatia de <%= denumiriOperatii[operatiaCurenta] %> <br> pentru <%= piesaCurenta.cantitatePieseFinalizate[operatiaPrecedenta]%> x <%= piesaCurenta.Denumire %></button>
+              </form>
+            <% } else { %>
+              <div style="display: flex; flex-direction: column; align-items: center; ">
+                <p style="font-size: 26px; font-weight: bold;">Se efectueaza o inspetie tehnica. Asteptati ok-ul controlorului!</p>
+                <br> <br>
+                <button type="button" onclick="window.location.href='/'">OK</button>
+              </div>
+            <% } %>
+          <% } else if (denumiriOperatii[operatiaCurenta].includes("Ambalare")) { %>
+            <% console.log("Operation needs packaging") %>
+            <% if (angajatCurent.verificator === true || angajatCurent.supervizor === true) { %>
+              <form method="POST" action="./operatii-piesa">
+                <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+                <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+                <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+                <input type="hidden" name="tipOperatie" value="InitiereFinalizare">
+                <button type="submit">Ati finalizat ambalarea celor <%= piesaCurenta.cantitateaTotala - piesaCurenta.cantitateRebut %> / <%= piesaCurenta.cantitateaTotala %> de <%= piesaCurenta.Denumire %> <br> din lotul <%= piesaCurenta._id %> (<%= piesaCurenta.nrRebut %> piese sunt in rebut)</button>
+              </form>
+            <% } else { %>
+              <div style="display: flex; flex-direction: column; align-items: center; ">
+                <p style="font-size: 26px; font-weight: bold;">Produsele sunt in curs de ambalare!</p>
+                <br> <br>
+                <button type="button" onclick="window.location.href='/'">OK</button>
+              </div>
+            <% } %>
+          <% } else if (denumiriOperatii[operatiaCurenta].includes("Livrare")) { %>
+            <% console.log("Operation needs delivering") %>
+            <% if (angajatCurent.verificator === true || angajatCurent.supervizor === true) { %>
+              <form method="POST" action="./meniu-operatie3">
+                <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+                <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+                <input type="hidden" name="index" value="<%= operatiaCurenta %>">
+                <input type="hidden" name="tipOperatie" value="InitiereFinalizare">
+                <input type="hidden" name="nrRebut" value="<%= piesaCurenta.cantitateRebut %>">
+                <input type="hidden" name="nrFin" value="<%=piesaCurenta.cantitateaTotala - piesaCurenta.cantitateRebut%>">
+                <button type="submit">Marcati ca finalizata livrarea celor <%= piesaCurenta.cantitateaTotala - piesaCurenta.cantitateRebut%> / <%= piesaCurenta.cantitateaTotala %> de <%= piesaCurenta.Denumire %> <br> din lotul <%= piesaCurenta._id %> (cu <%= piesaCurenta.cantitateRebut%> piese in rebut)</button>
+              </form>
+            <% } else { %>
+              <div style="display: flex; flex-direction: column; align-items: center; ">
+                <p style="font-size: 26px; font-weight: bold;">Lotul a fost finalizat. Produsele sunt in curs de livrare!</p>
+                <br> <br>
+                <button type="button" onclick="window.location.href='/'">OK</button>
+              </div>
+            <% } %>
+          <% } else { %>
+            <% console.log("Reception or release") %>
+            <% if (angajatCurent.receptie === true || angajatCurent.supervizor === true) { %>
+              <form method="POST" action="./operatii-piesa">
+                <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+                <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+                <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+                <input type="hidden" name="tipOperatie" value="InitiereFinalizare">
+                <button type="submit">Ati efectuat <%= denumiriOperatii[operatiaCurenta] %> <br> pentru <%= piesaCurenta.cantitatePieseFinalizate[operatiaPrecedenta]%> x <%= piesaCurenta.Denumire %></button>
+              </form>
+            <% } else { %>
+              <div style="display: flex; flex-direction: column; align-items: center; ">
+                <p style="font-size: 26px; font-weight: bold;">Se asteapta receptia si eliberarea materialului.</p>
+                <br> <br>
+                <button type="button" onclick="window.location.href='/'">OK</button>
+              </div>
+            <% } %>
+          <% } %>
+        <% } else { %>
+          <% if (piesaCurenta.setupTerminat[operatiaCurenta] === true || piesaCurenta.setupTerminat[operatiaCurenta] === null) { %>
+            <% console.log("Operation commencing") %>
+            <form method="POST" action="./operatii-piesa">
+              <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+              <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+              <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+              <input type="hidden" name="tipOperatie" value="Initiere">
+              <button type="submit">Initiaza <%= denumiriOperatii[operatiaCurenta] %> <br> pentru <%= piesaCurenta.cantitatePieseFinalizate[operatiaPrecedenta]%> x <%= piesaCurenta.Denumire %></button>
+            </form>
+          <% } else if (piesaCurenta.setupTerminat[operatiaCurenta] === false) { %>
+            <% console.log("Operation needs setting up") %>
+            <form method="POST" action="./operatii-piesa">
+              <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+              <input type="hidden" name="idPiesa" value="<%= piesaCurenta._id %>">
+              <input type="hidden" name="operatieCurenta" value="<%= operatiaCurenta %>">
+              <input type="hidden" name="tipOperatie" value="Setup">
+              <button type="submit">Initiati setup pentru operatia de <br> <%= denumiriOperatii[operatiaCurenta] %> <%= piesaCurenta.cantitatePieseFinalizate[operatiaPrecedenta]%> x <%= piesaCurenta.Denumire %></button>
+            </form>
+          <% } %>
+        <% } %>
+      <% } %>
+    </div>
+
+  </div>
+
+  </div>
+
+</body>
+</html>

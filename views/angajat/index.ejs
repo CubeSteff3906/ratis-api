@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/angajat/index.css">
+  <title>Bun venit!</title>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      var inputElement = document.getElementById('myInput');
+      inputElement.focus();
+      inputElement.select();
+    })
+  </script>
+</head>
+<body>
+    <div class="outer-container">
+
+      <form class="form-comanda" method="POST" action="./angajat">
+
+        <p class="salut" id="greetingText"></p>
+
+        <label for="idComanda">SCANEAZA CODUL DE BARE <br> AL COMENZII PENTRU A INCEPE</label>
+        <img src="icons/scanner.png">
+        <input style="opacity: 0; position: absolute;" type="text" id="myInput" name="idLot" placeholder="NUMARUL COMENZII" autofocus>
+
+        <input type="hidden" name="idAngajat" value="<%= idAngajat %>">
+
+        <div style="display: flex;">
+          <button type="button" style="margin-right: 1rem;" onclick="window.location.href = '/'" >ANULATI</button>
+          <button style="position: absolute; opacity: 0; top:0;" type="submit">INTRODUCETI</button>
+        </div>
+
+      </form>
+
+    </div>
+
+
+    <script>
+
+      // Footer time text
+      const greetingText = document.getElementById('greetingText');
+      
+      function updateTime() {
+        const date = new Date();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        const second = date.getSeconds();
+        let greeting;
+      
+        if ((hour >= 0 && hour < 5) || (hour >= 19 && hour <= 24)) {
+          greeting = 'BUNA SEARA, <%=nume%>!';
+        } else if (hour >= 6 && hour < 10) {
+          greeting = 'BUNA DIMINEATA, <%=nume%>!';
+        } else {
+          greeting = 'BUNA ZIUA, <%=nume%>!';
+        }
+      
+        greetingText.textContent = greeting;
+      }
+      
+      updateTime(); // Update time immediately
+      setInterval(updateTime, 1000); // Update time every second
+    </script>
+
+</body>
+</html>
