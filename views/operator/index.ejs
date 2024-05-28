@@ -5,24 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/styles/operator/index.css">
-  <title>Operator</title>
+  <title>Smart Catalog</title>
 </head> 
 
 <body>
 
   <header>
-    <div class="div-buton-inapoi">
-      <a style="font-size: 1.2em; width: 8vw;" href="../" class="buton-inapoi">&#10094; INAPOI</a>
-    </div>
-    <p style="margin-left: 1%;"> <img style="display:inline; margin: 0; margin-left: 8%; margin-bottom: -15px; width: 16%;" src="/images/logo-ratis-color.jpg"> FISE DE URMARIRE LOTURI</p>
+    <p style="margin-left: 1%; padding-bottom: 0%;"> <img style="display:inline; margin: 0; margin-left: 6%; margin-right: 18%; margin-bottom: -1.5%; width: 5%;" src="/lambda-logo.svg"> FISE DE URMARIRE LOTURI</p>
     <button onClick="window.location.href = '/operator/catalog?filtru=null&idAngajat=<%=idAngajat%>';" style="margin-right: 0;">CATALOG PRODUS</button>
     <button onClick="window.location.href = '/operator/popup?err=null&idAngajat=<%= idAngajat %>';" style="margin-left: 0.2em;">ADAUGA FISA +</button>
   </header>
 
-
   <div class="corp">
-
-    <div style="display: flex; flex-direction: column; width:35%;">
+    <div class="lots-container">
       <section class="titlu" style="border-bottom: none;">
         <p>LOTURI IN ASTEPTARE</p>
       </section>
@@ -53,14 +48,13 @@
       </section>
     </div>
 
-    <div style="display: flex; flex-direction: column; width: 63%;">
+    <div class="lots-container" style="width: 63%;">
       <section class="titlu" style="border-bottom: none;">
         <p style="margin: 0.05em 0;" >LOTURI IN PRODUCTIE</p>
       </section>
       <section class="lista">
         <% loturiFinalizate.forEach(lot=> { %>
           <br>
-          <div style="border: 3px solid black; width: 120%; height: 0.2em;"></div> <br>
           <div class="element2">
             <div class="div-stanga">
               <p style="margin: 0; max-width: 200px; overflow:hidden; text-overflow: ellipsis; text-wrap: nowrap;">LOTUL #<%= lot._id %> - <%= lot.Identificator %>
@@ -90,7 +84,6 @@
         <% }); %>
         <% loturiInCurs.forEach(lot=> { %>
           <br>
-          <div style="border: 3px solid black; width: 120%; height: 0.2em;"></div> <br>
           <div class="element2">
             <div class="div-stanga">
               <p style="margin: 0; max-width: 350px; overflow:hidden; text-overflow: ellipsis;">LOTUL #<%= lot._id %> - <%= lot.Identificator %></p>
@@ -114,9 +107,6 @@
           </div>
         <% }); %>
         <br>
-        <% if (loturiInCurs.length > 0 || loturiFinalizate.length > 0) { %>
-          <div style="border: 3px solid black; width: 120%; height: 0.2em;"></div> <br>
-        <% } %>
       </section>
     </div>
   </div>

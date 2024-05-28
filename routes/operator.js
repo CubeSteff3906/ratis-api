@@ -16,7 +16,6 @@ router.get('/', async (req, res) => {
   const operatii = await Operatii.find().exec();
   const idAngajat = req.query.idAngajat;
   const vectorMare = await Loturi.find().exec();
-  console.log(await Loturi.findOne({ _id: "240023" }).exec());
   res.render('operator', { idAngajat, loturiInCreare, loturiInCurs, loturiFinalizate, bazaLoturiInCurs, produse, operatii, vectorMare });
 })
 

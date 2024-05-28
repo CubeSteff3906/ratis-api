@@ -5,15 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/styles/operator/catalog.css">
-  <title>Catalog</title>
+  <title>Smart Catalog</title>
 </head>
 
 <body>
-
   <header>
     <div class="div-buton-inapoi">
       <a href="/operator?idAngajat=<%=idAngajat%>" class="buton-inapoi">&#10094; INAPOI</a>
-      <p style="margin: 0 20vw 0 17vw;">CATALOG PRODUSE</p>
+      <p>CATALOG PRODUSE</p>
       <button
         onClick="window.location.href = '/operator/catalog-popup?filtru=<%= filtru %>&codReper=null&idAngajat=<%=idAngajat%>';"
         style="margin-left: 0.2em;">ADAUGA PRODUS +</button>
@@ -21,104 +20,94 @@
   </header>
   <div class="corp">
     <div class="big-daddy-scroll">
-      <% if (filtru==="null" ) { %>
-        <% produse.forEach(element=> { %>
-          <div
-            style="display: flex; justify-content: space-between; margin: 1em 0.5em; padding: 1em 1em; font-size: 20px; font-weight: bold; border: 2px solid black;">
+      <% if (filtru === "null") { %>
+        <% produse.forEach(element => { %>
+          <div style="display: flex; justify-content: space-between; margin: 1em 0.5em; padding: 1em 1em; font-size: 20px; font-weight: bold; border: 2px solid black;">
             <div style="display: flex; flex-direction: column;">
-              <%= element.Denumire %>
-                <%= element.Cod_reper %>
-                  <% const v=element.Revizii %> <br>
-                    <%= v.length %>
-                      <% if(v.length> 1) { %>
-                        Revizii
-                        <% } else { %>
-                          Revizie
-                          <% } %>
+              <%= element.Denumire %> <%= element.Cod_reper %>
+              <% const v = element.Revizii %> <br> 
+              <%= v.length %>
+              <% if(v.length > 1) { %>
+                Revizii
+              <% } else { %>
+                Revizie
+              <% } %>
             </div>
-            <div style="display: flex; justify-content: center;">
-              <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer;"
-                onclick="window.location.href='/operator/catalog-popup?filtru=<%=filtru%>&codReper=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img
-                  style="width: 2em;" src="/icons/adauga.png"></button>
+            <div style="display: flex; justify-content: space-between; width: 10vw;">
+                <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer; margin-left: -10px;" onclick="window.location.href='/operator/selectie-revizie?filtru=<%=filtru%>&codReper=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img style="width: 2.4em;" src="/icons/cog.png"></button>
+                <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer; margin-left: -4px;" onclick="window.location.href='/operator/catalog-popup?filtru=<%=filtru%>&codReper=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img style="width: 2.4em;" src="/icons/adauga.png"></button>
+                <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer;" onclick="window.location.href='/operator/sterge-produs?filtru=<%=filtru%>&idProdus=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img style="width: 2.4em;" src="/icons/trash.png"></button>
             </div>
           </div>
-          <% }); %>
-            <% } else { %>
-              <% produse.forEach(element=> { %>
-                <% let cod=element.Cod_reper %>
-                  <% const string=cod.toString(); %>
-                    <% cod=string.substring(cod.length - 6, cod.length - 4) %>
-                      <% if (filtru===cod) { %>
-                        <div
-                          style="display: flex; justify-content: space-between; margin: 1em 0.5em; padding: 1em 1em; font-size: 20px; font-weight: bold; border: 2px solid black;">
-                          <div style="display: flex; flex-direction: column;">
-                            <%= element.Denumire %>
-                              <%= element.Cod_reper %>
-                                <% const v=element.Revizii %> <br>
-                                  <%= v.length %>
-                                    <% if(v.length> 1) { %>
-                                      Revizii
-                                      <% } else { %>
-                                        Revizie
-                                        <% } %>
-                          </div>
-                          <div style="display: flex; justify-content: center;">
-                            <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer;"
-                              onclick="window.location.href='/operator/catalog-popup?filtru=<%=filtru%>&codReper=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img
-                                style="width: 2em;" src="/icons/adauga.png"></button>
-                          </div>
-                        </div>
-                        <% } %>
-                          <% }); %>
-                            <% } %>
+        <% }); %>
+      <% } else { %>
+        <% produse.forEach(element => { %>
+          <% let cod = element.Cod_reper %>
+          <% const string = cod.toString(); %>
+          <% cod = string.substring(cod.length - 6, cod.length - 4) %>
+          <% if (filtru === cod) { %>
+            <div style="display: flex; justify-content: space-between; margin: 1em 0.5em; padding: 1em 1em; font-size: 20px; font-weight: bold; border: 2px solid black;">
+              <div style="display: flex; flex-direction: column;">
+                <%= element.Denumire %> <%= element.Cod_reper %>
+                <% const v = element.Revizii %> <br> 
+                <%= v.length %>
+                <% if(v.length > 1) { %>
+                  Revizii
+                <% } else { %>
+                  Revizie
+                <% } %>
+              </div>
+              <div style="display: flex; justify-content: center;">
+                <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer; margin-left: -10px;" onclick="window.location.href='/operator/selectie-revizie?filtru=<%=filtru%>&codReper=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img style="width: 2em;" src="/icons/cog.png"></button>
+                <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer; margin-left: -4px;" onclick="window.location.href='/operator/catalog-popup?filtru=<%=filtru%>&codReper=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img style="width: 2em;" src="/icons/adauga.png"></button>
+                <button style="background-color: rgba(0,0,0,0); border: none; cursor: pointer;" onclick="window.location.href='/operator/sterge-produs?filtru=<%=filtru%>&idProdus=<%=element.Cod_reper%>&idAngajat=<%=idAngajat%>'"><img style="width: 2em;" src="/icons/trash.png"></button>
+              </div>
+            </div>
+          <% } %>
+        <% }); %>
+        <% } %>
     </div>
     <div class="navbar">
-      <form class="sectiune-cautare">
-        <label>CAUTA PRODUS</label>
-        <div>
-          <input type="text" name="Cod_Reper" placeholder="INTRODU COD REPER">
-          <button><img style="width: 1.6em; height: 1.6em;" src="/icons/cauta.png"></button>
-        </div>
-      </form>
       <form method="POST" action="/operator/catalog" class="sectiune-filtre">
         <p>FILTREAZA ANUL</p>
         <input type="hidden" name="idAngajat" value="<%=idAngajat%>">
         <div class="continut">
-          <label style="font-weight: bold;" for="an">AN:</label>
-          <select id="mySelect" name="filtru">
-            <option value="null">Niciunul</option>
-            <option value="10">2010</option>
-            <option value="11">2011</option>
-            <option value="12">2012</option>
-            <option value="13">2013</option>
-            <option value="14">2014</option>
-            <option value="15">2015</option>
-            <option value="16">2016</option>
-            <option value="17">2017</option>
-            <option value="18">2018</option>
-            <option value="19">2019</option>
-            <option value="20">2020</option>
-            <option value="21">2021</option>
-            <option value="22">2022</option>
-            <option value="23">2023</option>
-            <script>
-              const select = document.getElementById("mySelect");
-              const filtru = '<%= filtru %>';
-              select.value = filtru;
-            </script>
-          </select>
+          <div style="display: flex;">
+            <label style="font-weight: bold;" for="an">AN:</label>
+            <select id="mySelect" name="filtru">
+              <option value="null">Niciunul</option>
+              <option value="10">2010</option>
+              <option value="11">2011</option>
+              <option value="12">2012</option>
+              <option value="13">2013</option>
+              <option value="14">2014</option>
+              <option value="15">2015</option>
+              <option value="16">2016</option>
+              <option value="17">2017</option>
+              <option value="18">2018</option>
+              <option value="19">2019</option>
+              <option value="20">2020</option>
+              <option value="21">2021</option>
+              <option value="22">2022</option>
+              <option value="23">2023</option>
+              <option value="24">2024</option>
+              <script>
+                const select = document.getElementById("mySelect");
+                const filtru = '<%= filtru %>';
+                select.value = filtru;
+              </script>
+            </select>
+          </div>
           <button>CAUTA <img style="width: 1em; height: 1em; margin-left: 0.4em;" src="/icons/cauta.png"></button>
         </div>
       </form>
     </div>
   </div>
 
-    <section class="fundal-pop-up">
-  
+  <section class="fundal-pop-up">
     <div class="pop-up">
-  
       <div class="header-pop-up">
-        <p style="margin: 0;">FISA DESCRIERE PRODUS</p>
+        <p style="margin: 0;">EDITARE REVIZIE</p>
       </div>
 
       <form method="POST" action="/operator/catalog-popup?idAngajat=<%=idAngajat%>">
@@ -128,50 +117,52 @@
 
         <% } else { %>
 
-            <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <div class="form-element">
+                <label>Cod Reper (RTSP):</label>
+                <input type="text" name="Cod_Reper" value="<%=codReper%>" required>
+              </div>
+              
+              <div class="form-element">
+                <label>Cod Echivalent Client:</label>
+                <input type="text" name="Cod_Client" value="<%=codClient%>" required>
+              </div>
+              
+              <div class="form-element">
+                <label>Desen:</label>
+                <input type="text" name="Desen" value="<%=Desen%>" required>
+              </div>
+              
+              <div class="form-element">
+                <label>Revizie:</label>
+                <input type="text" name="Revizie" value="<%=Rev%>" value="-">
+              </div>
+              
+              <input type="hidden" name="tip" value="produs">
+              
+              <div class="form-element">
+                <label>Denumire:</label>
+                <input type="text" name="Denumire" value="<%=denumire%>" required>
+              </div>
 
-                <div class="extra">
-                  <div>
-                    <label>Cod Reper (RTSP):</label>
-                    <input type="text" name="Cod_Reper" value="<%=codReper%>" required>
-                  </div>
-                  <div style="margin-left: 1.7em;">
-                    <label>Cod Echivalent Client:</label>
-                    <input type="text" name="Cod_Client" value="<%=codClient%>" required>
-                  </div>
-                </div>
-    
-                <div class="extra">
-                  <div>
-                    <label>Desen:</label>
-                    <input type="text" name="Desen" value="<%=Desen%>" required>
-                  </div>
-                  <div style="margin-left: 1.7em;">
-                    <label>Revizie:</label>
-                    <input type="text" name="Revizie" value="<%=Rev%>" required readonly>
-                  </div>
-                </div>
-    
-                <input type="hidden" name="tip" value="produs">
-    
-                <label style="margin-top: 0.4em;">Denumire:</label>
-                <input style="margin-bottom: 0.4em;" type="text" name="Denumire" value="<%=denumire%>" required>
-    
-                <input type="hidden" name="filtru" value="<%= filtru %>">
+              <input type="hidden" name="filtru" value="<%= filtru %>">
             </div>
-            <div style="margin-left: 1em; margin-top: 1em; display: flex; flex-direction: column; height: 25vh; border: 2px solid black; padding: 0 1em; overflow-y: scroll; margin-bottom: 0;">
-            <% let i = 1; %>
-            <% operatii.forEach(operatie => { %>
-                <div style="display: flex;">
-                <input style="margin: 0;"
+            <div class="checkboxes-container">
+              <% let i=1; %>
+              <% operatii.forEach(operatie => { %>
+                <div class="operation">
+                  <input
+                    style="margin: 0;"
                     <% if (i <= vectorOperatii.length - 1 && vectorOperatii[i] === true) { %>
-                        checked="on"
+                      checked="on"
                     <% } %>
-                type="checkbox" name="<%= operatie.id %>" value="<%= operatie.id %>">
-                <label style="margin: 0; margin-left: 0.3em;" for="<%= operatie.id %>"> <%= operatie.nume %> </label>
+                    type="checkbox"
+                    name="<%= operatie.id %>"
+                    value="<%= operatie.id %>">
+                  <label style="margin: 0; margin-left: 0.3em;" for="<%= operatie.id %>"> <%= operatie.nume %> </label>
                 </div>
                 <% i++; %>
-            <% }); %>
+              <% }); %>
             </div>
         <% } %>
 

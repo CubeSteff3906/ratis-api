@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  background-color: rgb(245, 245, 245);
 }
 
 header {
@@ -18,9 +19,10 @@ header {
 }
 
 header p {
+  width: 55%;
   font-size: 32px;
   font-weight: bold;
-  margin: 0 2em 0 0;
+  margin: 0 0em 0 0;
 }
 
 header button {
@@ -29,11 +31,17 @@ header button {
   border-radius: 0.2em;
   padding: 0.75em 1em;
   margin: 0 1em;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+header button:hover {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .div-buton-inapoi {
   display: flex;
-  text-align: center;
   align-items: center;
   font-size: 1.2em;
   padding-left: 0.8em;
@@ -53,11 +61,19 @@ header button {
   justify-content: space-between;
 }
 
+.corp .lots-container {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  border-radius: 6px;
+  border: 4px solid black;
+  background-color: white;
+}
+
 .corp section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px solid black;
 }
 
 .corp .div-titlu {
@@ -101,6 +117,7 @@ header button {
   display: flex;
   justify-content: space-between;
   border: 2px black solid;
+  border-radius: 10px;
   padding: 1.2em 1em;
 }
 
@@ -223,6 +240,7 @@ header button {
   display: flex;
   justify-content: space-between;
   border: 2px black solid;
+  border-radius: 10px;
   padding: 1.2em 1em;
 }
 
@@ -256,7 +274,6 @@ header button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: 26px;
   font-weight: bold;
@@ -275,13 +292,18 @@ header button {
   margin: 0 1em 0 1em;
   width: 1em;
   height: 1em;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.element2 .div-dreapta img:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .element2 .div-dreapta button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
-
 
 
 .acceseaza-piesa {
@@ -292,6 +314,10 @@ header button {
   align-items: center;
   border: 2px black solid;
   padding: 0;
+}
+
+.yes {
+  cursor: pointer;
 }
 
 
