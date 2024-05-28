@@ -19,6 +19,6 @@ echo Database services online!
 echo Booting up the central mainframe...
 echo.
 
-call npm run devStart
+call npm run start
 
 pause

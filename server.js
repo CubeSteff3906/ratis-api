@@ -36,3 +36,6 @@ app.use('/operator', operatorRouter);
 
 const angajatRouter = require('./routes/angajat');
 app.use('/angajat', angajatRouter);
+
+const utilRouter = require("./routes/util");
+app.use("/util", utilRouter);
